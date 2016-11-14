@@ -15,7 +15,7 @@
 #* possible in sense of: the observed PIN itself and all variations considering the adjacent digits
 #Can you help us to find all those variations? It would be nice to have a function, that returns an array of all variations for an observed PIN with a length of 1 to 8 digits. We could name the function getPINs (get_pins in python). But please note that all PINs, the observed one and also the results, must be strings, because of potentially leading '0's. We already prepared some test cases for you.
 #Detective, we count on you!
-#https://www.codewars.com/kata/5263c6999e0f40dee200059d
+#https://www.codewars.com/kata/the-observed-pin/solutions/python
 
 from itertools import product
 def get_pins(observed):
