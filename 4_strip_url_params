@@ -1,0 +1,18 @@
+#Complete the method so that it does the following:
+#Removes any duplicate query string parameters from the url
+#Removes any query string parameters specified within the 2nd argument (optional array)
+#https://www.codewars.com/kata/strip-url-params/python
+
+import re
+def strip_url_params(url, params_to_strip = []):
+    if '?' not in url: return url
+    i = url.index('?')
+    p = url[i+1:].split('&')
+    list = set()
+    result = []
+    for x in p:
+        r = re.match(r'.+?(?==)', x).group()
+        if r not in params_to_strip and r not in list:
+            list.add(r)
+            result.append(x)
+    return url[:i+1] + '&'.join(result)
